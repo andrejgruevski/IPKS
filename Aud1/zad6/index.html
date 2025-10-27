@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 6</title>
+</head>
+<body>
+<script>
+    let n = prompt("Vnesi broevi");
+    n = parseInt(n);
+    let max = n;
+    while (!isNaN(n)){
+        if (n > max){
+            max = n;
+        }
+        n = prompt("Vnesi broevi");
+        n = parseInt(n)
+    }
+    document.write("Najgolemiot broj shto go vnesovte e "+ max);
+</script>
+</body>
+</html>

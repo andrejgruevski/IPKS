@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+<script>
+  let a = prompt("Vnesete vrednost");
+  let b = prompt("Vnesete druga vrednost");
+
+  a = parseInt(a);
+  b = parseInt(b);
+
+  if (!isNaN(a) && !isNaN(b)){
+    if (a > b) {
+      document.write("Maksimumot e " + a);
+    }else{
+      document.write("Maksimumot e " + b);
+    }
+  }else{
+    document.write("Nevalidna vrednost!");
+  }
+</script>
+</body>
+</html>

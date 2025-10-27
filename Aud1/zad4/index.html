@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+</head>
+<body>
+<script>
+    let x = prompt("Vnesi broj");
+    let n = prompt("Vnesi eksponent");
+    x = parseInt(x);
+    n = parseInt(n);
+
+    let counter, y;
+    if (isNaN(x) || isNaN(n)) {
+        document.write("Pogreshni vrednosti!")
+    }else{
+        for (counter = 1, y = x; counter < n; counter++){
+            x *= y;
+        }
+        document.write(y + "^" + n + " = " + x);
+    }
+
+</script>
+</body>
+</html>

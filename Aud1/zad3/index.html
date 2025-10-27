@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+</head>
+<body>
+<script>
+    let x = prompt("X: ");
+    let y = prompt("Y: ");
+    x = parseInt(x);
+    y = parseInt(y);
+
+    if (!isNaN(x) || !isNaN(y)){
+        if (x > 0){
+            if (y > 0){
+                document.write("Prv kvadrant");
+            }else if (y < 0){
+                document.write("Chetvrt kvadrant")
+            }else {
+                document.write("Pozitivna x oska.")
+            }
+        }else if (x < 0){
+            if (y > 0){
+                document.write("Vtor kvadrant");
+            }else if (y < 0 ){
+                document.write("Tret kvadrant")
+            }else {
+                document.write("Negativna x oska.");
+            }
+        }else{
+            if (y > 0){
+                document.write("Pozitivna y oska.");
+            }else if (y < 0){
+                document.write("Negativna y oska.");
+            }else{
+                document.write("Pochetok na koordinatite.");
+            }
+        }
+    }else{
+        document.write("Nevalidni koordinati!")
+    }
+</script>
+</body>
+</html>
