@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+</head>
+<body>
+<script>
+    let forma = prompt("Vnesi forma");
+    if (forma === 'krug') {
+        let radius = prompt("Vnesi radius na krugot");
+        let perimetar = 2 * radius * Math.PI;
+        let ploshtina = (radius * radius) * Math.PI;
+
+        if (perimetar > ploshtina) {
+            alert("Perimetarot e pomal od ploshtinata za " + perimetar / ploshtina)
+        } else {
+            alert("Ploshtinata e pomala od perimetarot za " + ploshtina / perimetar)
+
+        }
+    } else if (forma === 'kvadrat') {
+        let strana = prompt("Vnesi strana na kvadratot");
+        let perimetar = 2 * strana;
+        let ploshtina = strana * strana;
+
+        if (perimetar > ploshtina) {
+            alert("Perimetarot e pomal od ploshtinata za " + perimetar / ploshtina)
+        } else {
+            alert("Ploshtinata e pomala od perimetarot za " + ploshtina / perimetar)
+
+        }
+    } else {
+        alert("Nevalidna vrednost")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 5</title>
+</head>
+<body>
+<script>
+  let a = prompt("Vnesi prv broj")
+  let b = prompt("Vnesi vtor broj")
+  a = parseInt(a)
+  b = parseInt(b)
+  let sum = a+b;
+
+  let str = sum.toString();
+  let obratno = str.split("").reverse().join("");
+
+
+  if (str === obratno) {
+    alert("Zbirot na dvata broevi e palindrom")
+    console.log("ebise")
+  }else{
+    alert("Zbirot na dvata broevi ne e palindrom")
+    console.log("ebiserrr ")
+
+
+  }
+</script>
+</body>
+</html>

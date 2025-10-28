@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+</head>
+<body>
+<script>
+    let konverzija = prompt("Vnesi konverzija");
+    let temperatura = prompt("Vnesi temperatura");
+    temperatura = parseInt(temperatura);
+    if (konverzija === "F") {
+        let rez = (temperatura * 9 / 5) + 32;
+        alert("Temperaturata iznesuva " + rez);
+    } else if (konverzija === "C") {
+        let rez = (temperatura - 32) * 5 / 9;
+        alert("Temperaturata iznesuva " + rez);
+    }
+</script>
+</body>
+</html>

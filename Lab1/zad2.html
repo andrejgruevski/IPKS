@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+</head>
+<body>
+<script>
+    let n = prompt("Vnesi chetiricifren broj");
+    n = parseInt(n);
+
+    if (n < 1000 || n > 9999) {
+        alert("Vneseniot broj ne e chetiricifren")
+    } else {
+        let str = n.toString();
+
+        if (str[0] === str[3] && str[1] === str[2]) {
+            alert("Brojot e palindrom")
+        } else {
+            alert("Brojot ne e palindrom")
+        }
+    }
+</script>
+</body>
+</html>

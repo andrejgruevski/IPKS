@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+<script>
+    let maxSum = -1;
+    let max;
+    for (let i = 0; i < 5; i++) {
+        let n = prompt("Vnesi 5 tricifreni broevi");
+        n = parseInt(n);
+
+        if (n < 100 || n > 999) {
+            alert("Vneseniot broj ne e trocifren");
+            i--;
+        }
+
+        let tmp = n;
+        let sum = 0;
+        while (tmp > 0) {
+            sum += tmp % 10;
+            tmp = tmp / 10;
+        }
+        if (sum > maxSum) {
+            maxSum = sum;
+            max = n;
+        }
+    }
+    alert("Broj so najgolem zbir e " + parseInt(max));
+
+</script>
+</body>
+</html>
