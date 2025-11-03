@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+</head>
+<body>
+<script>
+  let str = prompt("Vnesi string");
+
+  let abc = 'qwertyuiopasdfghjklzxcvbnm'
+  let flag = true;
+  for (let i = 0; i < str.length; i++) {
+    let letter = abc[i];
+    if (!str.includes(letter)) {
+      flag = false;
+      break;
+    }
+  }
+  if (flag) {
+    console.log("Stringot gi sodrzhi site bukvi")
+  }else{
+    console.log("Stringot ne gi sodrzhi site bukvi")
+  }
+</script>
+
+
+</body>
+</html>

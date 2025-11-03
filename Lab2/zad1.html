@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+<script>
+    let str = prompt("Vnesi go prviot string");
+    let str1 = prompt("Vnesi go vtoriot string");
+    let str2 = prompt("Vnesi go tretiot string");
+
+    let strings = [str,str1,str2];
+    let longestWord = "";
+
+    for (let i = 0; i < strings.length; i++) {
+        let words = strings[i].split(" ");
+
+        for (let j = 0; j < words.length; j++) {
+            let current = words[j];
+            if (current.length > longestWord.length) {
+                longestWord = current;
+            }
+        }
+    }
+    console.log("Najdolg zbor od stringovite e: " + longestWord)
+</script>
+</body>
+</html>
