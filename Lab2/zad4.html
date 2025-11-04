@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+</head>
+<body>
+<script>
+    let  str = prompt("Vnesi string")
+    function formatString(str) {
+
+        str = str.replace(/-/g, " ");
+        let words = str.split(" ");
+        let result = "";
+
+
+        for (let i = 0; i < words.length; i++) {
+            let word = words[i];
+            if (word.length > 0) {
+                let first = word[0].toUpperCase();
+                let rest = word.slice(1);
+                result += first + rest + " ";
+            }
+        }
+        return result;
+    }
+    alert(formatString(str))
+
+</script>
+</body>
+</html>
