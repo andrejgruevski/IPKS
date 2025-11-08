@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сите Задачи</title>
+</head>
+<body>
+<script>
+    // Напишете JavaScript функција која како аргумент прима поле и
+    // параметар n, а како резултат ги враќа првите n елементи од
+    // полето
+    function func (array,n){
+        if (array == null){
+            return void 0;
+        }
+        if (n == null){
+            return array[0];
+        }
+        if (n < 0){
+            return [];
+        }
+        return array.slice(0,n);
+
+    }
+    // console.log(func([],3));
+    // console.log(func([7, 9, 0, -2],3));
+    // console.log(func([7, 9, 0, -2],6));
+    // console.log(func([7, 9, 0, -2],-3));
+
+
+    // Напишете JavaScript код кој ќе ги спои сите елементи во еден
+    // стринг
+    function merge(array){
+        array.toString();
+        // array.join();
+        // array.join('+');
+
+        return array.toString();
+    }
+    // console.log(merge(["Andrej","mogila","bitola"]))
+
+
+//     Напишете JavaScript код кој прима број како влез и вметнува „-“
+// помеѓу секои два парни броеви.
+//     let num = prompt("Input number");
+//     let str = num.toString();
+//     let result = [str[0]]
+//     for (let i = 1; i < str.length; i++){
+//         if ((str[i-1]%2 === 0) && (str[i]%2 === 0)){
+//             result.push('-',str[i]);
+//         }else{
+//             result.push(str[i]);
+//         }
+//     }
+    // console.log(result.join(''));
+
+
+
+    // Напишете функција во JavaScript која како аргументи прима две
+    // полиња, а како резултат враќа унија од двете полиња
+    function union(array1,array2){
+        if ((array1==null) || (array2==null)){
+            return void 0;
+        }
+        let obj = {};
+
+        for (let i = array1.length-1; i >=0; i--){
+            obj[array1[i]] = array1[i];
+        }
+        for (let i = array2.length-1; i >=0; i--){
+            obj[array2[i]] = array2[i];
+        }
+        let res = [];
+
+        for (let n in obj){
+            if (obj.hasOwnProperty(n)){
+                res.push(obj[n]);
+            }
+        }
+        return res;
+    }
+    // console.log(union([1,2,3], [100,2,1,10]));
+
+
+    // Да се напише функција која ќе
+    // пополнува низа со вредности (број и
+    // карактер) според дадени параметри
+
+    function numStringRange(start,end,step){
+        let range = [];
+        if (step === 0 || (typeof start == "undefined") || (typeof end == "undefined") || (typeof start != typeof end)){
+            return false;
+        }
+        if (end < start){
+            step = -step;
+        }
+        if (typeof start =="number"){
+            while (step > 0 ? end >= start : end <= start){
+                range.push(step);
+                start+=step;
+            }
+        }else if(typeof start == "string"){
+            if (start.length != 1 || end.length != 1){
+                throw TypeError("String with one character are supported");
+            }
+            start = start.charCodeAt(0);
+            end = end.charCodeAt(0);
+
+            while (step > 0 ? end >= start : end <= start){
+                range.push(String.fromCharCode(start));
+                start+=step;
+            }
+        }else{
+            throw TypeError("Only string and number are supported");
+        }
+        return range;
+    }
+
+    console.log(numStringRange('a', "z", 2)); //=> ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+    console.log(numStringRange("Z", "A", 2)); //=> ["Z", "X", "V", "T", "R", "P", "N", "L", "J", "H", "F", "D", "B"]
+    console.log(numStringRange(0, -5, 1)); //=> [0, -1, -2, -3, -4, -5]
+    console.log(numStringRange(0, 25, 5)); //=> [0, 5, 10, 15, 20
+</script>
+</body>
+</html>
