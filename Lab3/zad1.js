@@ -30,7 +30,7 @@ while (true) {
     teams[code1].goals.push(g1);
     teams[code2].goals.push(g2);
 
-}
+}  
 
 let total = 0;
 let codes = Object.keys(teams).sort((a, b) => Number(a) - Number(b));

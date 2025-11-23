@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercises</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<p id="text">ChatGPT is better than www3schools!!!</p>
+<button id="style" onclick="funkcija()">change</button>
+
+<p> <a id="finkash" rel="nofollow" href="http://www.w3resource.com">finkito</a></p>
+<button onclick="atributes()">finkito atributes</button>
+
+<p onmouseover="changeColor()" onmouseout="returntoNormal()"><strong>Lorem</strong>is simply <strong>dummy</strong> text of the printing and typesetting industry.
+    Lorem Ipsum has been <strong>the</strong> industry's standard dummy text ever since the 1500s
+    when an unknown printer took a galley <strong>of</strong> type <strong>and</strong> scrambled
+    it to make a <strong>type</strong> specimen book.</p>
+
+<form>
+    Select your fav color
+    <select id="select">
+        <option>red</option>
+        <option>blue</option>
+        <option>black</option>
+        <option>green</option>
+    </select>
+    <input type="button" onclick="getOptions()" value="get options">
+</form>
+
+<p>Vnesi radius i volumen</p>
+<form id="form">
+    <label for="radius">Radius</label>
+    <input type="text" id="radius" name="radius" required><br>
+
+    <label for="volume">Volume</label>
+    <input type="text" id="volume" name="volume"><br>
+
+    <input style="margin: 15px"  type = "submit" value = "calculate" id="submit">
+</form>
+<script>
+    let n =Math.floor((Math.random()*100)+1)
+    console.log(n+", "+ isPrime(n));
+</script>
+</body>
+</html>
