@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+    <script src="zad1.js"></script>
+</head>
+<style>
+    label {
+        display: block;
+        margin-bottom: 12px;
+    }
+    input, select {
+        padding: 4px 12px;
+    }
+    table{
+        border-collapse: collapse;
+        margin-top: 24px;
+    }
+    table{
+        border: 1px solid black;
+        padding: 4px 8px;
+    }
+</style>
+<body>
+<h1>Форма за внесување оцени</h1>
+
+<div>
+    <label>Име: <input id="name"/></label>
+    <label>Презиме: <input id="surname"/></label>
+    <label>Индекс: <input id="indeks"/></label>
+    <label>Предмет: <input id="subject"/></label>
+    <label>Оцена:
+        <select id="grade">
+            <option> 5 (пет) </option>
+            <option> 6 (шест) </option>
+            <option> 7 (седум) </option>
+            <option> 8 (осум) </option>
+            <option> 9 (девет) </option>
+            <option> 10 (десет) </option>
+        </select>
+    </label>
+    <button onclick="add()">Внеси</button>
+</div>
+<table id="table">
+    <tr>
+        <td>Име</td>
+        <td>Презиме</td>
+        <td>Индекс</td>
+        <td>Предмет</td>
+        <td>Оцена</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
