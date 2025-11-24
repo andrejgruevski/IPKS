@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 5</title>
+    <script src="zad5.js"></script>
+</head>
+<style>
+    .ind {
+        width: 80px;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    #weak {
+        background-color: grey;
+    }
+
+    #medium {
+        background-color: grey;
+    }
+
+    #strong {
+        background-color: grey;
+    }
+
+    .active {
+        background-color: red;
+    }
+
+    .mediumActive {
+        background-color: orange;
+    }
+
+    .strongActive {
+
+        background-color: green;
+    }
+</style>
+<body>
+<p>Enter your password</p>
+<input type="password" id="password" oninput="pw()">
+
+<div id="weak" class="ind">Weak</div>
+<div id="medium" class="ind">Medium</div>
+<div id="strong" class="ind">Strong</div>
+</body>
+</html>
