@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+    <script src="zad2.js"></script>
+</head>
+<style>
+    div{
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+
+    }
+    table{
+        font: bold 15px Arial;
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+
+</style>
+<body>
+<h2>Project details</h2>
+<div>
+    <label>Author</label><input type="text" id="author">
+</div>
+<div>
+    <label>Project</label><input type="text" id="project">
+</div>
+<div>
+    <label>Cost</label><input type="text" id="price">
+</div>
+<button onclick="isprati()">ADD</button>
+
+<h2>Project list - Total cost: <span id="totalCost">0</span></h2>
+
+<table id="table">
+    <tr>
+        <td>Author</td>
+        <td>Project</td>
+        <td>Cost</td>
+    </tr>
+</table>
+</body>
+</html>
