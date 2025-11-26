@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online shop</title>
+
+</head>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
+    div {
+        margin-bottom: 12px;
+    }
+
+    label {
+        width: 180px;
+        display: inline-block;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"], select {
+        padding: 7px 10px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        width: 230px;
+        outline: none;
+        transition: 0.3s ease;
+    }
+
+    input[type="text"]:focus, select:focus {
+        border-color: #4a90e2;
+        box-shadow: 0 0 5px #4a90e2a5;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 8px 18px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.25s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #3077c6;
+    }
+    .tables {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        background: white;
+        min-width: 480px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    th {
+        background: #4a90e2;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    tr:hover {
+        background: #f2f7ff;
+    }
+
+
+    .sold-row {
+        background: yellow !important;
+    }
+
+
+    table button {
+        background: #d9534f;
+    }
+
+    table button:hover {
+        background: #b52b27;
+    }
+
+
+    td:last-child {
+        text-align: center;
+    }
+
+</style>
+<body>
+<h1>ONLINE SHOP</h1>
+<div>
+    <label>Name and surname</label><input type="text" id="fullname"><br>
+</div>
+
+<div>
+    <label>Item</label><input type="text" id="item"><br>
+</div>
+
+<div>
+    <label>Item code</label><input type="text" id="code"><br>
+</div>
+
+<div>
+    <label>Description</label><input type="text" id="desc"><br>
+</div>
+
+<div>
+    <label>Price</label><input type="text" id="price"><br>
+</div>
+<div>
+    <label>Used</label><select id="select">
+    <option>Used</option>
+    <option>never-used</option>
+</select><br>
+
+
+    <button onclick="addItems()">Add</button>
+</div>
+
+<div class="tables">
+        <h2>Unused Items</h2>
+        <table id="never-used">
+            <tr>
+                <th>Name</th>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Code</th>
+                <th>Number</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+</div>
+
+<div class="tables">
+    <h2>Used Items</h2>
+    <table id="used">
+        <tr>
+            <th>Name</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Code</th>
+            <th>Number</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+</div>
+
+
+<script src="OnlineShop.js"></script>
+</body>
+</html>
