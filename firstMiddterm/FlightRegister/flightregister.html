@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Register</title>
+
+</head>
+<style>
+    .kartichki {
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin-bottom: 15px;
+
+    }
+    .kartichkaEdrilica{
+        border: 5px solid black;
+    }
+</style>
+<body>
+<h1>Регистрирај лет</h1>
+<div>
+    <label>Име и презиме</label><input type="text" id="fullname"><br>
+</div>
+
+<div>
+    <label>Ознака на летало</label><input type="text" id="oznaka"><br>
+</div>
+
+<div>
+    <label>Координати на лет</label><input type="text" id="koordinati"><br>
+</div>
+
+<div>
+    <label>Радиус на лет</label><input type="text" id="radius"><br>
+</div>
+
+<div>
+    <label>Висина на лет</label><input type="text" id="visina"><br>
+</div>
+
+<div>
+    <label>Тип на летало</label><select id="tip">
+    <option>Едрилица</option>
+    <option>Дрон</option>
+</select>
+</div>
+<button onclick="najavi()">Најави</button>
+
+<div id="letovi">
+    <h2>Регистрирани летови</h2>
+    <ol id="list">
+
+    </ol>
+</div>
+
+<script src="flightregister.js"></script>
+</body>
+</html>
