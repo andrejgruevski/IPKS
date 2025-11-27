@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-top: 30px;
+        color: #333;
+        text-align: left;
+    }
+
+    div {
+        margin-bottom: 12px;
+    }
+
+    label {
+        display: inline-block;
+        width: 140px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input, select {
+        padding: 6px 10px;
+        width: 220px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus {
+        border-color: #2d89ef;
+        box-shadow: 0 0 5px rgba(45,137,239,0.4);
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #2d89ef;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background-color: #1e5fb8;
+    }
+
+    #table {
+        margin-top: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background: #eee;
+    }
+
+    tr:hover {
+        background-color: #f1f7ff;
+    }
+
+    .teacher-row {
+        background-color: #c6f7c3 !important;
+    }
+
+    .student-row {
+        background-color: #cfe8ff !important;
+    }
+
+    .hired {
+        background-color: grey !important;
+        color: white;
+    }
+
+    .hire-btn {
+        background-color: #28a745;
+    }
+
+    .hire-btn:hover {
+        background-color: #1f7f33;
+    }
+</style>
+
+<body>
+
+<div>
+    <label>Name and Surname</label><input type="text" id="fullname"><br>
+</div>
+
+<div>
+    <label>Email</label><input type="text" id="email"><br>
+</div>
+
+<div>
+    <label>Age</label><input type="text" id="age"><br>
+</div>
+
+<div>
+    <label>Username</label><input type="text" id="username"><br>
+</div>
+
+<div>
+    <label>Password</label><input type="text" id="password"><br>
+</div>
+
+<div>
+    <label>Role</label><select id="role">
+    <option>teacher</option>
+    <option>student</option>
+</select>
+</div>
+<button onclick="addData()">Add</button><br>
+<p>Available teachers: <span id="counter">0</span></p>
+<div id="table">
+    <h2>Users</h2>
+    <table id="users">
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+</div>
+
+<script src="onlineclasses.js"></script>
+</body>
+</html>
