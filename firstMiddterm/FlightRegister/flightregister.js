@@ -49,4 +49,4 @@ function otkazhi(ref){
 
     let li = ref.parentNode.parentNode;
     li.remove();
-}
+}  

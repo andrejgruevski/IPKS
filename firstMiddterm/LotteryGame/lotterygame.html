@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery Game</title>
+
+</head>
+<style>
+    .forma {
+        display: inline-block;
+    }
+    .kartichka{
+        display: inline-block;
+        border: 2px solid black;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        width: 350px;
+        height: 350px;
+    }
+    .topche{
+        border: 1px black solid;
+        border-radius: 100%;
+        padding:3px;
+        margin: 0.5px;
+    }
+</style>
+<body>
+<h1>Lottery Game</h1>
+
+<div class="forma">
+    <h2>Assign form</h2>
+
+    <div>
+        <label>Name and surname</label><input type="text" id="fullname">
+    </div>
+
+    <div>
+        <label>Ticket amount</label><input type="number" id="amount">
+    </div>
+
+    <div>
+        <label>Code</label><input type="text" id="code">
+    </div>
+
+    <div>
+        <label>Combination</label><input type="text" id="comb">
+    </div>
+
+    <div>
+        <label>Bonus</label><select id="bonus">
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+    </div>
+
+    <button onclick="procesiraj()">Add</button>
+
+</div>
+<div class="forma">
+    <h2>Lucky numbers</h2>
+    <div id="numbers"></div>
+    <button onclick="getNumbers()">Get weekly combination</button>
+</div>
+<div id="cards"></div>
+
+<script src="lotterygame.js"></script>
+</body>
+</html>
