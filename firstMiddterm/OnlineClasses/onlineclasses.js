@@ -1,6 +1,4 @@
 function addData(){
-
-
     var fullname = document.getElementById("fullname").value;
     var email = document.getElementById("email").value;
     var age = document.getElementById("age").value;
@@ -15,7 +13,6 @@ function addData(){
         password: pw,
         role: role,
     }
-
     if (!fullname || !email || !pw || !age || !role || !username) {
         alert("Please enter valid data format!");
         return;
@@ -28,16 +25,13 @@ function addData(){
         alert("Teacher must be older than 18y")
         return;
     }
-
     var table = document.getElementById("users");
     var counter = document.getElementById("counter").innerHTML;
-
     if (users.role === "teacher"){
         counter= parseInt(counter)+1;
         document.getElementById("counter").innerHTML = counter;
         console.log(counter);
         table.innerHTML += `
-        
         <tr style="background-color: lightgreen">
         <td>${fullname}</td>
         <td>${username}</td>
@@ -48,8 +42,7 @@ function addData(){
         </tr>
     `
     }else{
-        table.innerHTML += `
-        
+        table.innerHTML += `  
         <tr style="background-color: lightblue">
         <td>${fullname}</td>
         <td>${username}</td>
@@ -61,13 +54,10 @@ function addData(){
     }
 }
 function hire(ref){
-
     let redica = ref.parentNode.parentNode;
     redica.style.background = "grey"
     ref.remove();
     var counter = document.getElementById("counter").innerHTML;
     counter= parseInt(counter)-1;
     document.getElementById("counter").innerHTML = counter;
-
-
 }
