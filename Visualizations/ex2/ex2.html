@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="ex2.js" defer></script>
+
+
+</head><style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+        text-align: center;
+        color: #333;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #222;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        font-size: 26px;
+        color: #444;
+    }
+
+    .chart-box {
+        width: 80%;
+        margin: 20px auto 50px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chart-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+    }
+</style>
+
+
+<body>
+<h1>City Demographics & Income Visualization</h1>
+
+<h2>Population Distribution by Age Group (Pie Chart)</h2>
+<div id="pieChart" class="chart-box"></div>
+
+<h2>Income Distribution by Occupation (Bubble Chart)</h2>
+<div id="bubbleChart" class="chart-box"></div>
+</body>
+</html>
