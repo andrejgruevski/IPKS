@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadacha 1</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="zad1.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    select {
+        margin-bottom: 20px;
+        padding: 6px;
+    }
+
+    #scatter, #pie {
+        margin-top: 20px;
+    }
+
+</style>
+<body>
+
+    <h1>Weekly Weather Overview</h1>
+    <select onchange="visualizeData(this.value)">
+        <option>Skopje</option>
+        <option>London</option>
+        <option>Rome</option>
+    </select>
+
+<div id="scatter"></div>
+<div id="pie"></div>
+
+</body>
+</html>
