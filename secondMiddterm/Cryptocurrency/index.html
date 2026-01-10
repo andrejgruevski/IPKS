@@ -8,16 +8,179 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <style>
-    .badge{
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    body {
+        background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+        color: #ffffff;
+        min-height: 100vh;
+        padding: 30px;
+    }
+
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+
+    label {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+
+    select {
+        display: block;
+        margin: 0 auto 30px auto;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: #111827;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+
+    #indicator {
+        text-align: center;
+        color: #facc15;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        animation: pulseText 1.5s infinite;
+    }
+
+    @keyframes pulseText {
+        0% { opacity: 1; }
+        50% { opacity: .5; }
+        100% { opacity: 1; }
+    }
+
+
+    #badgesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .badge {
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        margin-left: 30px;
-        margin-top: 30px;
+        margin: 15px;
+        cursor: pointer;
+        background: #ffffff;
+        padding: 5px;
         position: relative;
         bottom: 200px;
         opacity: 0;
+        transition: transform .3s, box-shadow .3s;
     }
+
+    .badge:hover {
+        transform: scale(1.25);
+        box-shadow: 0 0 20px rgba(56,189,248,.8);
+    }
+
+
+    #cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        background: linear-gradient(145deg, #111827, #1f2933);
+        border-radius: 15px;
+        padding: 20px;
+        width: 280px;
+        margin: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.5);
+        animation: cardAppear .6s ease-out;
+    }
+
+    @keyframes cardAppear {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+        color: #38bdf8;
+        text-align: center;
+    }
+
+    .card p {
+        margin: 6px 0;
+        font-size: .95rem;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        padding-bottom: 4px;
+    }
+
+
+    button {
+        background: linear-gradient(135deg, #38bdf8, #2563eb);
+        border: none;
+        color: #ffffff;
+        font-size: .95rem;
+        padding: 10px 16px;
+        border-radius: 10px;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform .3s, box-shadow .3s;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(37,99,235,.6);
+    }
+
+
+    #charts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    #line-chart,
+    #bar-chart {
+        background: #0f172a;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,.6);
+    }
+
+
+    @media (max-width: 900px) {
+        #charts {
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
 </style>
 <body>
 <h1>Cryptocurreny visualizer</h1>
@@ -31,7 +194,7 @@
 </select>
 
 <div id="badgesContainer"></div>
-
+<div id="cards-container"></div>
 <div id="charts">
     <div id="line-chart"></div>
     <div id="bar-chart"></div>
