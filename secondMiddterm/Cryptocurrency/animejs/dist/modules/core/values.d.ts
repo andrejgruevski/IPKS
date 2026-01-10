@@ -1,0 +1,14 @@
+export function setValue<T, D>(targetValue: T | undefined, defaultValue: D): T | D;
+export function getFunctionValue(value: TweenPropValue, target: Target, index: number, total: number, store?: any): any;
+export function getTweenType(target: Target, prop: string): tweenTypes;
+export function getOriginalAnimatableValue(target: Target, propName: string, tweenType?: tweenTypes, animationInlineStyles?: any | void): string | number;
+export function getRelativeValue(x: number, y: number, operator: string): number;
+export function createDecomposedValueTargetObject(): TweenDecomposedValue;
+export function decomposeRawValue(rawValue: string | number, targetObject: TweenDecomposedValue): TweenDecomposedValue;
+export function decomposeTweenValue(tween: Tween, targetObject: TweenDecomposedValue): TweenDecomposedValue;
+export const decomposedOriginalValue: TweenDecomposedValue;
+import type { TweenPropValue } from '../types';
+import type { Target } from '../types';
+import { tweenTypes } from './consts.js';
+import type { TweenDecomposedValue } from '../types';
+import type { Tween } from '../types';

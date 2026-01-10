@@ -1,0 +1,10 @@
+export function getTweenSiblings(target: Target, property: string, lookup?: string): TweenPropertySiblings;
+export function overrideTween(tween: Tween): void;
+export function composeTween(tween: Tween, siblings: TweenPropertySiblings): Tween;
+export function removeTweenSliblings(tween: Tween): Tween;
+export function removeTargetsFromRenderable(targetsArray: TargetsArray, renderable?: Renderable, propertyName?: string): void;
+import type { Target } from '../types';
+import type { TweenPropertySiblings } from '../types';
+import type { Tween } from '../types';
+import type { TargetsArray } from '../types';
+import type { Renderable } from '../types';

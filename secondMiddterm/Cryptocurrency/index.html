@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto</title>
+    <script src="index.js"></script>
+    <script src="animejs/dist/bundles/anime.umd.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<style>
+    .badge{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-left: 30px;
+        margin-top: 30px;
+        position: relative;
+        bottom: 200px;
+        opacity: 0;
+    }
+</style>
+<body>
+<h1>Cryptocurreny visualizer</h1>
+
+<label for="sortSelect">Sort Cryptocurrency by: </label>
+<select onchange="fetchData()" id="sortSelect">
+    <option value="market_cap">Market Cup</option>
+    <option value="current_price">Current Price</option>
+    <option value="total_volume">Volume</option>
+    <option value="price_change_percentage_24h">Last 24h changes (percentage)</option>
+</select>
+
+<div id="badgesContainer"></div>
+
+<div id="charts">
+    <div id="line-chart"></div>
+    <div id="bar-chart"></div>
+</div>
+</body>
+</html>
