@@ -9,7 +9,6 @@ async function fetchData(){
     cryptoData = data;
     console.log(data)
     filterData(data)
-
 }
 
 function filterData(){
@@ -35,8 +34,8 @@ function visualizeBadges(){
     anime.animate('.badge',{
         opacity: 1,
         bottom: 0,
-        delay: anime.stagger(50),
-        duration: 1000
+        delay: anime.stagger(100),
+        duration: 2000
     })
 }
 function visualizePlots(){
@@ -133,6 +132,7 @@ function createCards(cryptoData){
 
     cardEl.appendChild(cardTitle);
     cardEl.appendChild(cardMarketCap);
+    cardEl.appendChild(currentPrice);
     cardEl.appendChild(cardTotalVolume);
 
     document.getElementById('cards-container').appendChild(cardEl);
