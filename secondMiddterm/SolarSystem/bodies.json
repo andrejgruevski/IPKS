@@ -1,0 +1,124 @@
+{
+  "bodies": [
+    {
+      "name": "Mercury",
+      "meanRadius": 2439.7,
+      "gravity": 3.7,
+      "escape": 4250,
+      "mass": 3.3011e23,
+      "density": 5.43,
+      "sideralOrbit": 88,
+      "moons": []
+    },
+    {
+      "name": "Venus",
+      "meanRadius": 6051.8,
+      "gravity": 8.87,
+      "escape": 10360,
+      "mass": 4.8675e24,
+      "density": 5.24,
+      "sideralOrbit": 224.7,
+      "moons": []
+    },
+    {
+      "name": "Earth",
+      "meanRadius": 6371,
+      "gravity": 9.81,
+      "escape": 11186,
+      "mass": 5.97237e24,
+      "density": 5.51,
+      "sideralOrbit": 365.25,
+      "moons": [
+        {
+          "name": "Moon",
+          "discoveryDate": "Prehistory"
+        }
+      ]
+    },
+    {
+      "name": "Mars",
+      "meanRadius": 3389.5,
+      "gravity": 3.71,
+      "escape": 5030,
+      "mass": 6.4171e23,
+      "density": 3.93,
+      "sideralOrbit": 687,
+      "moons": [
+        {
+          "name": "Phobos",
+          "discoveryDate": "1877-08-18"
+        },
+        {
+          "name": "Deimos",
+          "discoveryDate": "1877"
+        }
+      ]
+    },
+    {
+      "name": "Jupiter",
+      "meanRadius": 69911,
+      "gravity": 24.79,
+      "escape": 60200,
+      "mass": 1.8982e27,
+      "density": 1.33,
+      "sideralOrbit": 4331,
+      "moons": [
+        { "name": "Io", "discoveryDate": "1610-01-08" },
+        { "name": "Europa", "discoveryDate": "1610" },
+        { "name": "Ganymede", "discoveryDate": "1610-01-07" },
+        { "name": "Callisto", "discoveryDate": null },
+        { "name": "Amalthea", "discoveryDate": "1892" },
+        { "name": "Himalia", "discoveryDate": "1904" },
+        { "name": "Elara", "discoveryDate": "1905" },
+        { "name": "Pasiphae", "discoveryDate": "1908" },
+        { "name": "Sinope", "discoveryDate": "1914" },
+        { "name": "Lysithea", "discoveryDate": "1938" },
+        { "name": "Carme", "discoveryDate": "1938" }
+      ]
+    },
+    {
+      "name": "Saturn",
+      "meanRadius": 58232,
+      "gravity": 10.44,
+      "escape": 36090,
+      "mass": 5.6834e26,
+      "density": 0.69,
+      "sideralOrbit": 10747,
+      "moons": [
+        { "name": "Titan", "discoveryDate": "1655" },
+        { "name": "Rhea", "discoveryDate": "1672" },
+        { "name": "Iapetus", "discoveryDate": "1671" },
+        { "name": "Dione", "discoveryDate": "1684" },
+        { "name": "Tethys", "discoveryDate": "1684" }
+      ]
+    },
+    {
+      "name": "Uranus",
+      "meanRadius": 25362,
+      "gravity": 8.69,
+      "escape": 21300,
+      "mass": 8.6810e25,
+      "density": 1.27,
+      "sideralOrbit": 30589,
+      "moons": [
+        { "name": "Titania", "discoveryDate": "1787" },
+        { "name": "Oberon", "discoveryDate": "1787" },
+        { "name": "Umbriel", "discoveryDate": "1851" },
+        { "name": "Ariel", "discoveryDate": "1851" }
+      ]
+    },
+    {
+      "name": "Neptune",
+      "meanRadius": 24622,
+      "gravity": 11.15,
+      "escape": 23500,
+      "mass": 1.02413e26,
+      "density": 1.64,
+      "sideralOrbit": 59800,
+      "moons": [
+        { "name": "Triton", "discoveryDate": "1846-10-10" },
+        { "name": "Nereid", "discoveryDate": "1949" }
+      ]
+    }
+  ]
+}
